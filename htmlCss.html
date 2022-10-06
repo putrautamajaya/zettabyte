@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    body {
+        background-color: azure;
+        padding: 20px;
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    .container {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .container-2 {
+        padding: 15px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .container-2>img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .card {
+        width: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        margin-right: 20px;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .card>img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .text-1,
+    .text-2,
+    .text-3,
+    .text-4,
+    .text-5,
+    .text-6 {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .text-1,
+    .text-3 {
+        color: #333333;
+    }
+
+    .text-1 {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .text-2 {
+        font-size: 12px;
+        color: #767676;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .text-3 {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+
+    .text-4 {
+        font-size: 14px;
+        color: #73d7ff;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .text-5 {
+        color: #333333;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+
+    .text-6 {
+        font-size: 12px;
+        color: #767676;
+    }
+
+    .text-4:hover {
+        filter: brightness(1.2);
+    }
+
+    .f-rss {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .f-rsc {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .f-rec {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .f-rcc {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .f-rspc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .f-css {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .container-popup {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(29, 29, 29, 0.6);
+    }
+</style>
+
+<head>
+    <title>Putra Utama Jaya | zettabyte</title>
+</head>
+
+<body>
+    <div class="f-rss">
+        <div class="card">
+            <img src="./assets/image-1.jpg" alt="image-1">
+            <div class="container">
+                <div class="text-1">Top Winter Locations</div>
+                <div class="text-2">More than 200 locations</div>
+                <div class="text-3">Cards provide context and an entry point to more robust information and views, and
+                    their content and quantity can vary greatly.</div>
+                <div class="f-rspc">
+                    <div class="f-rcc">
+                        <button class="text-4" style="margin-right: 10px;">SHARE</button>
+                        <button class="text-4" onclick="openPopup()">EXPLORE</button>
+                    </div>
+                    <img src="./assets/icon-arrow-down.svg" width="20px">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./assets/image-2.jpg" alt="image-2">
+            <div class="container">
+                <div class="text-1">Top Winter Locations</div>
+                <div class="text-2">More than 200 locations</div>
+                <div class="f-rspc">
+                    <div class="f-rcc">
+                        <button class="text-4" style="margin-right: 10px;">SHARE</button>
+                        <button class="text-4" onclick="openPopup()">EXPLORE</button>
+                    </div>
+                    <img src="./assets/icon-arrow-down.svg" width="20px">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="f-rsc container-2">
+                <img src="./assets/image-5.webp">
+                <div class="f-css">
+                    <div class="text-5">Christy</div>
+                    <div class="text-6">20 mins. ago</div>
+                </div>
+            </div>
+            <img src="./assets/image-3.jpg" alt="image-3">
+            <div class="container">
+                <div class="text-1">Top Winter Locations</div>
+                <div class="text-2">More than 200 locations</div>
+                <div class="text-3">Cards provide context and an entry point to more robust information and views, and
+                    their content and quantity can vary greatly.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./assets/image-4.jpg" alt="image-4">
+            <div class="f-rec container">
+                <img src="./assets/icon-favourite.svg" width="20px" style="margin-right: 10px;">
+                <img src="./assets/icon-bookmark.svg" width="20px" style="margin-right: 10px;">
+                <img src="./assets/icon-location.svg" width="20px">
+            </div>
+        </div>
+
+        <div id="popup" class="container-popup" style="display: none;">
+            <div class="card" style="width: 400px;">
+                <div class="f-rsc container-2">
+                    <img src="./assets/image-5.webp">
+                    <div class="f-css">
+                        <div class="text-5">Christy</div>
+                        <div class="text-6">20 mins. ago</div>
+                    </div>
+                </div>
+                <img src="./assets/image-1.jpg" alt="image-1" style="height: 250px;">
+                <div class="container">
+                    <div class="text-1">Top Winter Locations</div>
+                    <div class="text-2">More than 200 locations</div>
+                    <div class="text-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, expedita eligendi
+                        molestias dolore repellendus perspiciatis tempore in temporibus, minus sapiente id quaerat dicta
+                        sequi et sed cum, suscipit rerum facere.</div>
+                    <div class="f-rec">
+                        <button class="text-4" style="margin-right: 10px;" onclick="closePopup()">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            const el = document.getElementById('popup')
+            el.style.display = 'flex'
+        }
+
+        function closePopup() {
+            const el = document.getElementById('popup')
+            el.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
